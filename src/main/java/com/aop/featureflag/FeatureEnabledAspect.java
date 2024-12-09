@@ -27,8 +27,8 @@ public class FeatureEnabledAspect {
 
         if(featureToggleService.isFeatureEnabled(featureEnabled.value())) {
             return jp.proceed();
-        } else {
-            throw new UnsupportedOperationException("Feature disabled or doesn't exist");
-        }
+        } 
+
+        throw new UnsupportedOperationException("Feature disabled or doesn't exist");
     }
 }
